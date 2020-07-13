@@ -1,1 +1,1 @@
-worker yarn dev:server
+web node dist/index.js
