@@ -10,9 +10,11 @@ const app = express();
 
 const server = http.createServer(app);
 
+const IO = io(server);
+
 app.use((req: Request, _response: Response, next: NextFunction) => {
     //@ts-ignore
-    req.io = io(server);
+    req.io = IO;
 
     next();
 })
